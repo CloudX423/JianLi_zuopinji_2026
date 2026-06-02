@@ -8,7 +8,7 @@ interface CaseStudyCardProps {
     id: number;
     title: string;
     context: string;
-    goal: string;
+    goal: string | string[];
     tools: string[];
     process: string;
     output: string;
@@ -148,9 +148,17 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
       )}
 
       <div className="p-6">
-        <p className="text-sm text-secondary mb-4 leading-relaxed">
-          {caseStudy.goal}
-        </p>
+        {Array.isArray(caseStudy.goal) ? (
+          caseStudy.goal.map((paragraph, index) => (
+            <p key={index} className="text-sm text-secondary mb-4 leading-relaxed">
+              {paragraph}
+            </p>
+          ))
+        ) : (
+          <p className="text-sm text-secondary mb-4 leading-relaxed">
+            {caseStudy.goal}
+          </p>
+        )}
 
         {!showWorkflow && (
           <div className="flex flex-wrap gap-2">

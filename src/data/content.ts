@@ -28,7 +28,7 @@ const caseStudies: CaseStudy[] = [
     process: 'Product input → AI content direction → Video production → Platform adaptation',
     output: 'Series of short-form videos optimized for TikTok, Instagram Reels, and YouTube Shorts',
     learning: 'AI tools accelerate ideation and script drafting, but human judgment remains essential for tone calibration and brand fit.',
-    images: ['Case01_01A.jpg', 'Case01_02.jpeg', 'Case01_03.jpeg'],
+    images: ['Case01_00.png', 'Case01_01A.jpg', 'Case01_02.jpeg', 'Case01_03.jpeg'],
   },
   {
     id: 2,
